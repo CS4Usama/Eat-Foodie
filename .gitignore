@@ -12,7 +12,7 @@
 /build
 
 # Mine
-/z. npm-pkg
+/z. npm-pkg.txt
 
 # misc
 .DS_Store
