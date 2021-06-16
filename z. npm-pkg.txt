@@ -1,0 +1,5 @@
+npm install --save react-bootstrap bootstrap@4.6.0
+npm i @fortawesome/react-fontawesome
+npm i @fortawesome/fontawesome-svg-core
+npm i @fortawesome/free-solid-svg-icons
+npm i @fortawesome/free-brands-svg-icons

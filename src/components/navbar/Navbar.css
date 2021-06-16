@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Pacifico;
+    src: url(../../assets/Pacifico-Regular.ttf);
+}
+
+.navbarLogo {
+    user-select: none !important;
+    font-family: 'Pacifico', Arial, Helvetica, sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 35px !important;
+    color: tomato !important;
+    text-shadow: 2px 2px black !important;
+}
+
+.navbarLogo:hover {
+    color: lightseagreen !important;
+}
+  
+.btn-warning {
+    color: #fff !important;
+    background-color: #eb6825 !important;
+    border-color: #eb6825 !important;
+    transition: all 0.3s ease-in-out !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+  
+.btn-warning:hover {
+    color: #eb6825 !important;
+    background-color: #fff !important;
+    border-color: #eb6825 !important;
+}
+
+.home-cont3 {
+    background: url('../../assets/images/call-to-action-paralax.jpg') no-repeat center / cover;
+}

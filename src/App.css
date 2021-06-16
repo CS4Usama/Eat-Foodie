@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+* {
+  margin: 0px;
+  outline: none;
+  padding: 0px;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*, body{
+  font-family: 'Roboto', sans-serif !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-warning{
+  background-color: #eb6825 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-warning{
+ color: #eb6825 !important;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  font-size: 50px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2{
+  font-size: 30px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 2px !important;
+  font-weight: 700 !important;
+}
+
+h3{
+  font-size: 20px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 1px !important;
+  font-weight: 700 !important;
+}
+
+h5{
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h6{
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+a{
+  text-decoration: none;
+  color: #fff !important;
+  outline: none;
+  transition: all 0.3s ease-in-out !important;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #fff !important;
+  outline: none;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+/* For Navbar.js */
+.nav-link{
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+.nav-item .active{
+  font-size: 13px;
+  font-weight: 700;
+  color: #eb6825 !important;
+}
+
+.nav-item .btn{
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #eb6825;
+  border-color: #eb6825;
+  transition: all 0.3s ease-in-out !important
+}
+
+.btn-warning:hover {
+  color: #eb6825;
+  background-color: #fff;
+  border-color: #eb6825;
+}
+
+.btn-warning:focus, .btn-warning.focus {
+  box-shadow: none;
+}
+
+.btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active, .show > .btn-warning.dropdown-toggle {
+  color: #eb6825;
+  background-color: #fff;
+  border-color: #eb6825;
+}
+
+.btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus, .show > .btn-warning.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.home-cont3 {
+  background: url('./assets/images/call-to-action-paralax.jpg') no-repeat center / cover;
 }
