@@ -9,7 +9,7 @@ function Footer () {
     return (
         // Complete Footer Section
         <div className="container-fluid pt-5 bg-footer">
-            <div className="container mb-4">
+            <div className="container mb-3">
                 <div className="row">
 
                     {/* Popular Cities Section */}
@@ -66,39 +66,53 @@ function Footer () {
                             <h5 className="text-white">Connect</h5>
                         </div>
                         <div className="footer-list-div">
-                            <ul>
-                                <li className="pb-3">
-                                    <span className="bg-warning p-2 rounded mr-3">
+                            <ul className="">
+                                <li className="pb-1">
+                                    <span className="bg-warning p-2 rounded mr-2">
                                         <FontAwesomeIcon icon={faPhone} className="text-white" />
                                     </span>
                                     <span>+92 307 7504927</span>
                                 </li>
-                                <li className="pb-3">
-                                    <span className="bg-warning p-2 rounded mr-3">
+                                <li className="pb-3" style={{display:'flex', alignItems:'center'}}>
+                                    <span className="bg-warning p-2 rounded mr-2" style={{float:'left'}}>
                                         <FontAwesomeIcon icon={faEnvelope} className="text-white" />
                                     </span>
-                                    <a href="mailto:cs.cybernetic@gmail.com" target="_blank" rel="noreferrer">cs.cybernetic@gmail.com</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/usama-cs" target="_blank" rel="noreferrer">
-                                        <FontAwesomeIcon icon={faLinkedin} className="text-white" />
-                                    </a>
-                                    <span className="bg-warning p-2 rounded mr-3">
-                                        <FontAwesomeIcon icon={faGithub} className="text-white" />
-                                    </span>
-                                    <span className="bg-warning p-2 rounded mr-3">
-                                        <FontAwesomeIcon icon={faFacebook} className="text-white" />
+                                    <span className="gMail">
+                                        <a href="mailto:cs.cybernetic@gmail.com" target="_blank" rel="noreferrer">cs.cybernetic@gmail.com</a>
                                     </span>
                                 </li>
                                 <li style={{textAlign:'center'}}>
                                     <span className="bg-warning p-2 rounded mr-3">
-                                        <FontAwesomeIcon icon={faInstagram} className="text-white" />
+                                        <a href="https://www.linkedin.com/in/usama-cs" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon icon={faLinkedin} size='lg' className="text-white linkedIn" />
+                                        </a>
                                     </span>
                                     <span className="bg-warning p-2 rounded mr-3">
-                                        <FontAwesomeIcon icon={faTwitter} className="text-white" />
+                                        <a href="https://github.com/CS4Usama" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon icon={faGithub} size='lg' className="text-white gitHub" />
+                                        </a>
+                                    </span>
+                                    <span className="bg-warning p-2 rounded">
+                                        <a href="https://www.facebook.com/CS4Usama" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon icon={faFacebook} size='lg' className="text-white facebook" />
+                                        </a>
+                                    </span>
+                                </li>
+                                <li style={{textAlign:'center'}} className="mt-4">
+                                    <span className="bg-warning p-2 rounded mr-3">
+                                        <a href="https://www.instagram.com/CS4Usama" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon icon={faInstagram} size='lg' className="text-white instagram" />
+                                        </a>
                                     </span>
                                     <span className="bg-warning p-2 rounded mr-3">
-                                        <FontAwesomeIcon icon={faYoutube} className="text-white" />
+                                        <a href="https://twitter.com/CS4Usama" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon icon={faTwitter} size='lg' className="text-white twitter" />
+                                        </a>
+                                    </span>
+                                    <span className="bg-warning p-2 rounded">
+                                        <a href="https://www.youtube.com/channel/UCzIiHbpMfqfMrmN9JcJ8vsQ" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon icon={faYoutube} size='lg' className="text-white youtube" />
+                                        </a>
                                     </span>
                                 </li>
                             </ul>
@@ -110,7 +124,9 @@ function Footer () {
             {/* Footer Copyright Section */}
             <div className="container">
                 <div className="col-12 footer-copyright">
-                    <p>© 2021 Eat Foodie. All Rights Reserved. Powered By <span style={{ color: "#eb6825", fontWeight: 700 }}>Cyber Hawk</span></p>
+                    <p>© 2021 Eat Foodie. All Rights Reserved. Powered By &nbsp;
+                        <a href="https://github.com/CS4Usama" target="_blank" rel="noreferrer">Cyber Hawk</a>
+                    </p>
                 </div>
             </div>
         </div>

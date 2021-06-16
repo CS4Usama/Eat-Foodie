@@ -15,6 +15,12 @@
 .navbarLogo:hover {
     color: lightseagreen !important;
 }
+
+.navLink {
+    color: #cdcdcd !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
   
 .btn-warning {
     color: #fff !important;
