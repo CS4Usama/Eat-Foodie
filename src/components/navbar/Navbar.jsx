@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, Nav } from 'react-bootstrap';
 
 function NavbarComp() {
-
     return(
         <div>
             <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">

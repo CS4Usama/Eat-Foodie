@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faFacebook, faInstagram, faTwitter, faYoutube} from '@fortawesome/free-brands-svg-icons';
 
-
 function Footer () {
     return (
         // Complete Footer Section
