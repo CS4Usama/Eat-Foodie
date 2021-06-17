@@ -1,11 +1,15 @@
 import './App.css';
-import NavbarComp from "./components/navbar/Navbar";
+import HomeScreen from './modules/homeScreen/HomeScreen';
 import Footer from "./components/footer/Footer";
+import HomeNumberSection from './modules/HomeNumberSection';
 
 function App() {
   return (
     <div>
-      <NavbarComp />
+      <HomeScreen />
+      <HomeNumberSection />
+
+      
       <Footer />
 
     </div>

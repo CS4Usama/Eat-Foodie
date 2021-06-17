@@ -66,3 +66,11 @@ a:hover{
 .cursor-pointer{
   cursor: pointer;
 }
+
+
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px !important;
+  }
+}

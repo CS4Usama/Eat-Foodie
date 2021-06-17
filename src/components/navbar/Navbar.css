@@ -7,7 +7,7 @@
     user-select: none !important;
     font-family: 'Pacifico', Arial, Helvetica, sans-serif !important;
     font-weight: 500 !important;
-    font-size: 35px !important;
+    font-size: 2em !important;
     color: tomato !important;
     text-shadow: 2px 2px black !important;
 }
@@ -18,8 +18,9 @@
 
 .navLink {
     color: #cdcdcd !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
+    padding: none !important;   
 }
   
 .btn-warning {
@@ -27,7 +28,7 @@
     background-color: #eb6825 !important;
     border-color: #eb6825 !important;
     transition: all 0.3s ease-in-out !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
 }
   
@@ -35,8 +36,4 @@
     color: #eb6825 !important;
     background-color: #fff !important;
     border-color: #eb6825 !important;
-}
-
-.home-cont3 {
-    background: url('../../assets/images/call-to-action-paralax.jpg') no-repeat center / cover;
 }

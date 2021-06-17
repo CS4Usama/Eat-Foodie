@@ -1,0 +1,27 @@
+.home-cont1 {
+    background: url('../../assets/images/home-screen.jpg') no-repeat center / cover;
+}
+
+.home-cont1-text {
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
+}
+
+#searchText:focus {
+    color: #999ba3;
+}
+
+.home-cont1 div h1 {
+    letter-spacing: 6px;
+}
+
+div > button > b {
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .home-cont1-text {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+}

@@ -53,6 +53,7 @@
     font-weight: 700 !important;
 }
 
+/* Social Media Icons Hovering */
 a > .linkedIn:hover { color: #0077b5 !important; }
 a > .gitHub:hover { color: #000 !important; }
 a > .facebook:hover { color: 	#06f !important; }
