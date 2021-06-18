@@ -21,7 +21,7 @@ export default function HomeScreen() {
             </div>
             <div className="container text-white text-center mt-4">
               <div className="col-lg-7 col-md-8 col-sm-12 mx-auto">
-                <img style={{ width: "95%" }} draggable='false' alt="Our Services" src={OurServicesImage} />
+                <img src={OurServicesImage} alt="Our Services" className="our-services" draggable='false' />
               </div>
             </div>
           </div>

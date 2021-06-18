@@ -1,0 +1,12 @@
+.round-border {
+    display: inline-block;
+    border: 2px solid #eb6825;
+    border-radius: 100%;
+    line-height: 116px;
+    height: 126px;
+    width: 126px;
+}
+
+.how-works {
+    user-select: none !important;
+}

@@ -1,0 +1,23 @@
+.res-border {
+    border: 1px solid #f2f2f2;
+    box-shadow: 0 0 7px rgba(173, 173, 173, 0.32);
+}
+
+.feat-rest {
+    position: relative;
+}
+
+.rating {
+    display: inline-block;
+}
+
+.review {
+    position: absolute;
+    padding: 6px;
+}
+
+.favoriteRestaurant {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

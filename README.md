@@ -15,6 +15,7 @@ In this project, Node Package Manager (**npm**) is used to install different pac
 - FortAwesome / Free-Brands-svg-Icons
 - React Visibility Sensor
 - React CountUp
+- React Rating Stars Component
 
 ### Steps to run this project's source code successfully without any error:
 1. [Download Node.js](https://nodejs.org/en/download) and install it.

@@ -19,6 +19,11 @@ div > button > b {
     font-size: 16px;
 }
 
+.our-services {
+    user-select: none;
+    width: 95%;
+}
+
 @media (max-width: 600px) {
     .home-cont1-text {
         padding-top: 60px !important;
