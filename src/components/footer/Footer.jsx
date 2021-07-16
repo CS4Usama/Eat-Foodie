@@ -82,7 +82,7 @@ function Footer () {
                                 </li>
                                 <li style={{textAlign:'center'}}>
                                     <span className="bg-warning p-2 rounded mr-3">
-                                        <a href="https://www.linkedin.com/in/usama-cs" target="_blank" rel="noreferrer">
+                                        <a href="https://www.linkedin.com/in/CS4Usama" target="_blank" rel="noreferrer">
                                             <FontAwesomeIcon icon={faLinkedin} size='lg' className="text-white linkedIn" />
                                         </a>
                                     </span>

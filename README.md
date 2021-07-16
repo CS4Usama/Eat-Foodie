@@ -5,9 +5,18 @@
 
 </br>
 
-This project is cloned using **React.js** and **React-Bootstrap**. HTML5 is totally replaced with **JSX** and CSS3 is somehow replaced with **JSS** but mostly external CSS is used to make the design more attractive and user-friendly.
+#### This project is developed using these state of the art technologies: </br>
+1. **React.js** </br>
+    - Functional Components using Hooks and States
+    - JSX
+    - JSS
+3. **React-Router-DOM** </br>
+4. **Redux** </br>
+5. **Firebase** </br>
 
-In this project, Node Package Manager (**npm**) is used to install different package managers, frameworks and libraries like:
+HTML5 is totally replaced with **JSX** and CSS3 is somehow replaced with **JSS** but mostly external CSS is used to make the design more attractive and user-friendly.
+</br></br>
+#### In this project, Node Package Manager (**npm**) is used to install different package managers, frameworks and libraries like:
 - React-Bootstrap and Bootstrap
 - FortAwesome / React-FontAwesome
 - FortAwesome / FontAwesome-svg-Core
@@ -16,7 +25,7 @@ In this project, Node Package Manager (**npm**) is used to install different pac
 - React Visibility Sensor
 - React CountUp
 - React Rating Stars Component
-
+</br></br>
 ### Steps to run this project's source code successfully without any error:
 1. [Download Node.js](https://nodejs.org/en/download) and install it.
 2. Run terminal / cmd (command prompt) in which directory you have downloaded this source code...
