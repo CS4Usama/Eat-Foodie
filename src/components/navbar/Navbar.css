@@ -7,13 +7,14 @@
     user-select: none !important;
     font-family: 'Pacifico', Arial, Helvetica, sans-serif !important;
     font-weight: 500 !important;
-    font-size: 2em !important;
+    font-size: 1.6em !important;
     color: tomato !important;
     text-shadow: 2px 2px black !important;
 }
 
 .navbarLogo:hover {
     color: lightseagreen !important;
+    text-decoration: none !important;
 }
 
 .navLink {

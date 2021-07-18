@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import './UserRegistration.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavbarComp from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
 
 export default function UserRegistration() {
     return(
@@ -79,10 +79,13 @@ export default function UserRegistration() {
                         <p className="text-danger">  </p>
                         <button type="submit" className="btn btn-warning text-uppercase mb-3"><b>Create an Account</b></button>
                     </form>
-                    <p className="m-0">Already have an account? <span className="cursor-pointer text-warning">Login Here</span> </p>
+                    <p className="m-0">Already have an account?
+                        <Link to='/login'>
+                            <span className="cursor-pointer text-warning"> Login Here</span>
+                        </Link>
+                    </p>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

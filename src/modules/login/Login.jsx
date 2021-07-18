@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import './Login.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavbarComp from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
 
 export default function Login() {
     return(
@@ -29,10 +29,13 @@ export default function Login() {
                         </div>
                         <button type="submit" className="btn btn-warning text-uppercase mb-3"><b>Login Now</b></button>
                     </form>
-                    <p className="m-0">Don't have an account yet? <span className="cursor-pointer text-warning">Create an Account</span></p>
+                    <p className="m-0">Don't have an account yet?
+                        <Link to='/signup'>
+                            <span className="cursor-pointer text-warning"> Create an Account</span>
+                        </Link>
+                    </p>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
