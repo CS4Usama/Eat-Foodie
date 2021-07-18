@@ -1,14 +1,14 @@
 import firebase from 'firebase';
 
 var firebaseConfig = {
-    apiKey: "AIzaSyCryEsrfTBmuT4CmkqBcP6fhn5MqNPDirU",
-    authDomain: "eat-foodie-235ab.firebaseapp.com",
-    projectId: "eat-foodie-235ab",
-    storageBucket: "eat-foodie-235ab.appspot.com",
-    messagingSenderId: "232972087823",
-    appId: "1:232972087823:web:95e36139dc4bbc14d5a97a",
-    measurementId: "G-QECQTM3Z2T"
-  };
+  apiKey: "AIzaSyCJdLTQ-htT13LQDc-CFUj8aFl_0vUNsWI",
+  authDomain: "eat-foodie-5e685.firebaseapp.com",
+  projectId: "eat-foodie-5e685",
+  storageBucket: "eat-foodie-5e685.appspot.com",
+  messagingSenderId: "888028122760",
+  appId: "1:888028122760:web:ade4c8b863c007b5f6d93d",
+  measurementId: "G-5Y1993SJ6Y"
+};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
