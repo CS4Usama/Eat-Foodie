@@ -2,8 +2,7 @@
 
 - Firebase Deploy Link: </br>
 https://eat-foodie-5e685.web.app  </br>
-https://eat-foodie-5e685.firebaseapp.com
-</br>
+https://eat-foodie-5e685.firebaseapp.com </br>
 #### This project is developed using these state of the art technologies: </br>
 1. **React.js** </br>
     - Functional Components using Hooks and States
