@@ -30,6 +30,16 @@ span.text-warning {
     font-weight: 500;
 }
 
+.password-toogle-icon-signup {
+    color: rgb(130, 130, 130);
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    right: 0.8em;
+    margin-top: 2.5em;
+}
+
+
 @media (max-width: 768px) {
     h1 > strong {
         font-size: 45px !important;

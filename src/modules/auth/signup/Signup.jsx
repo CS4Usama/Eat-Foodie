@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import './Signup.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavbarComp from "../../../components/navbar/Navbar";
+import UseSignup from "./UseSignup";
+
 
 export default function Signup() {
+    const [passwordToogleIcon1, passwordToogleIcon2, passwordInputType1, passwordInputType2] = UseSignup();
+
     return(
         <div>
             <div className="container-fluid register-cont1">
@@ -32,11 +36,13 @@ export default function Signup() {
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <label htmlFor="userPassword">Password</label>
-                                <input type="password" className="form-control" id="userPassword" placeholder="Enter Your Password" required />
+                                <span className="password-toogle-icon-signup">{passwordToogleIcon1}</span>
+                                <input type={passwordInputType1} className="form-control" id="userPassword" placeholder="Create Your Password" required />
                             </div>
                             <div className="form-group col-md-6">
                                 <label htmlFor="userConfirmPassword">Confirm Password</label>
-                                <input type="password" className="form-control" id="userConfirmPassword" placeholder="Confirm Your Password" required />
+                                <span className="password-toogle-icon-signup">{passwordToogleIcon2}</span>
+                                <input type={passwordInputType2} className="form-control" id="userConfirmPassword" placeholder="Confirm Your Password" required />
                             </div>
                         </div>
                         <div className="form-row">
