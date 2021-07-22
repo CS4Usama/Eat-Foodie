@@ -25,7 +25,7 @@ export default function Signup() {
                     <form onSubmit={event=>{event.preventDefault()}}>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="userFullName">Full Name</label>
+                                <label htmlFor="userName">Full Name</label>
                                 <input type="text" className="form-control" id="userName" placeholder="Enter Your Full Name" required />
                             </div>
                             <div className="form-group col-md-6">
@@ -51,22 +51,22 @@ export default function Signup() {
                                 <input type="text" className="form-control" id="userCity" placeholder="Your City Name" required />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="userCountry">Country</label>
-                                <input type="text" className="form-control" id="userCountry" placeholder="Your Country Name" required />
+                                <label htmlFor="userFavoriteDish">Favorite Dish</label>
+                                <input type="text" className="form-control" id="userFavoriteDish" placeholder="Your Favorite Dish" required />
                             </div>
                         </div>
                         <div className="form-row">
-                            <div className="form-group col-md-4">
+                            <div className="form-group col-md-3">
                                 <label htmlFor="userGender">Gender</label>
-                                <select id="userGender" className="form-control">
+                                <select id="userGender" className="form-control">Choose
                                     <option defaultValue>Male</option>
                                     <option>Female</option>
                                     <option>Other</option>
                                 </select>
                             </div>
-                            <div className="form-group col-md-2">
-                                <label htmlFor="userAge">Age</label>
-                                <input type="number" className="form-control" id="userAge" required />
+                            <div className="form-group col-md-3">
+                                <label htmlFor="userDoB">Date of Birth</label>
+                                <input type="date" className="form-control" id="userDoB" required />
                             </div>
                             <div className="form-group col-md-6">
                                 <p className="mb-2">Profile Image</p>
