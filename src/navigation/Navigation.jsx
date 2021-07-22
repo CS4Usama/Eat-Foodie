@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from '../modules/Home';
-import Login from '../modules/login/Login';
-import UserRegistration from '../modules/userRegistration/UserRegistration';
+import Login from '../modules/auth/login/Login';
+import Signup from '../modules/auth/signup/Signup';
 import Footer from "../components/footer/Footer";
 
 export default function Navigation() {
@@ -18,7 +18,7 @@ export default function Navigation() {
                 </Route>
 
                 <Route path='/signup'>
-                    <UserRegistration />
+                    <Signup />
                 </Route>
 
             </Switch>

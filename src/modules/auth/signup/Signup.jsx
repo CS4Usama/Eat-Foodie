@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import './UserRegistration.css';
+import './Signup.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import NavbarComp from "../../components/navbar/Navbar";
+import NavbarComp from "../../../components/navbar/Navbar";
 
-export default function UserRegistration() {
+export default function Signup() {
     return(
         <div>
             <div className="container-fluid register-cont1">
