@@ -8,9 +8,9 @@ https://eat-foodie-5e685.firebaseapp.com </br>
     - Functional Components using Hooks and States
     - JSX
     - JSS
-3. **React-Router-DOM** </br>
-4. **Redux** </br>
-5. **Firebase** </br>
+2. **React-Router-DOM** </br>
+3. **Redux** </br>
+4. **Firebase** </br>
 
 HTML5 is totally replaced with **JSX** and CSS3 is somehow replaced with **JSS** but mostly external CSS is used to make the design more attractive and user-friendly.
 </br></br>
@@ -33,4 +33,4 @@ HTML5 is totally replaced with **JSX** and CSS3 is somehow replaced with **JSS**
 
 . . . . . . . . . . . . . . . . .
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
