@@ -1,6 +1,6 @@
 @font-face {
     font-family: Pacifico;
-    src: url(../../assets/Pacifico-Regular.ttf);
+    src: url(../../../assets/Pacifico-Regular.ttf);
 }
 
 .navbarLogo {
@@ -39,4 +39,15 @@
     color: #eb6825 !important;
     background-color: #fff !important;
     border-color: #eb6825 !important;
+}
+
+.profile-image {
+    margin-right: 4px;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}
+
+.profile-container {
+    padding: 0 !important;
 }

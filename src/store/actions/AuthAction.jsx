@@ -17,8 +17,8 @@ export const doLogin = (email, password) => async(dispatch) => {
         });
     } catch(err) {
         console.log("Exception is: ", err);
-        // alert(err);
-        alert(JSON.stringify(err));
+        // alert(JSON.stringify(err));
+        alert("User does not exist.");
     }
 }
 

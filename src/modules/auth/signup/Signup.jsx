@@ -64,14 +64,14 @@ export default function Signup() {
                                     <option>Other</option>
                                 </select>
                             </div>
-                            <div className="form-group col-md-3">
+                            <div className="form-group col-md-4">
                                 <label htmlFor="userDoB">Date of Birth</label>
                                 <input type="date" className="form-control" id="userDoB" required />
                             </div>
-                            <div className="form-group col-md-6">
+                            <div className="form-group col-md-5">
                                 <p className="mb-2">Profile Image</p>
                                 <div className="custom-file">
-                                    <input type="file" className="custom-file-input" id="userProfileImage" />
+                                    <input type="file" accept="image/*" className="custom-file-input" id="userProfileImage" />
                                     <label className="custom-file-label" htmlFor="userProfileImage">Choose Image</label>
                                 </div>
                             </div>

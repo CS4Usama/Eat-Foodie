@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './LoginNavbar.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, Nav } from 'react-bootstrap';
+import UseLoginNavbar from './UseLoginNavbar';
+import image from "../../../assets/images/feature-restaurant-1.png"
 
+function LoginNavbar() {
+    const [doUserLogout] = UseLoginNavbar();
 
-function NavbarComp(props) {
     return(
         <div>
             <Navbar collapseOnSelect expand="md" variant="dark">
@@ -23,11 +26,17 @@ function NavbarComp(props) {
                             </Link>
                         </Nav.Link>
                         <Nav.Link eventKey={2}>
-                            <Link className="text-uppercase navLink" to="/login">
-                                Login / Register
+                            <Link className="text-uppercase navLink" to="/my-orders">
+                                My Orders
                             </Link>
                         </Nav.Link>
-                        <button type="button" className="btn btn-warning btn-sm text-uppercase mx-2 px-3 py-0">Register Restaurant</button>
+                        <Nav.Link eventKey={3} className="profile-container">
+                            <Link className="text-uppercase navLink" to="/profile">
+                                <img src={image} alt="" className="profile-image" draggable='false' />
+                                Profile Name
+                            </Link>
+                        </Nav.Link>
+                        <button type="button" className="btn btn-warning btn-sm text-uppercase mx-2 px-3" onClick={doUserLogout}>Log Out</button>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -35,4 +44,4 @@ function NavbarComp(props) {
     );
 }
 
-export default NavbarComp;
+export default LoginNavbar;
