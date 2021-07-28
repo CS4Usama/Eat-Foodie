@@ -3,10 +3,12 @@ import './Signup.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavbarComp from "../../../components/navbar/Navbar";
 import UseSignup from "./UseSignup";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Signup() {
-    const [passwordToogleIcon1, passwordToogleIcon2, passwordInputType1, passwordInputType2] = UseSignup();
+    const [passwordToogleIcon1, passwordToogleIcon2, passwordInputType1, passwordInputType2, setEmail, setPassword, setConfirmPassword, setName, setCity, setFavDish, setGender, setDob, setProfileImage, doSignupUser] = UseSignup();
 
     return(
         <div>
@@ -26,52 +28,52 @@ export default function Signup() {
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <label htmlFor="userName">Full Name</label>
-                                <input type="text" className="form-control" id="userName" placeholder="Enter Your Full Name" required />
+                                <input type="text" className="form-control" id="userName" placeholder="Enter Your Full Name" onChange={(e) => setName(e.target.value)} required />
                             </div>
                             <div className="form-group col-md-6">
                                 <label htmlFor="userEmail">Email</label>
-                                <input type="email" className="form-control" id="userEmail" placeholder="Enter Your Email" required />
+                                <input type="email" className="form-control" id="userEmail" placeholder="Enter Your Email" onChange={(e) => setEmail(e.target.value)} required />
                             </div>
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <label htmlFor="userPassword">Password</label>
                                 <span className="password-toogle-icon-signup">{passwordToogleIcon1}</span>
-                                <input type={passwordInputType1} className="form-control" id="userPassword" placeholder="Create Your Password" required />
+                                <input type={passwordInputType1} className="form-control" id="userPassword" placeholder="Create Your Password" onChange={(e) => setPassword(e.target.value)} required />
                             </div>
                             <div className="form-group col-md-6">
                                 <label htmlFor="userConfirmPassword">Confirm Password</label>
                                 <span className="password-toogle-icon-signup">{passwordToogleIcon2}</span>
-                                <input type={passwordInputType2} className="form-control" id="userConfirmPassword" placeholder="Confirm Your Password" required />
+                                <input type={passwordInputType2} className="form-control" id="userConfirmPassword" placeholder="Confirm Your Password" onChange={(e) => setConfirmPassword(e.target.value)} required />
                             </div>
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <label htmlFor="userCity">City</label>
-                                <input type="text" className="form-control" id="userCity" placeholder="Your City Name" required />
+                                <input type="text" className="form-control" id="userCity" placeholder="Your City Name" onChange={(e) => setCity(e.target.value)} required />
                             </div>
                             <div className="form-group col-md-6">
                                 <label htmlFor="userFavoriteDish">Favorite Dish</label>
-                                <input type="text" className="form-control" id="userFavoriteDish" placeholder="Your Favorite Dish" required />
+                                <input type="text" className="form-control" id="userFavoriteDish" placeholder="Your Favorite Dish" onChange={(e) => setFavDish(e.target.value)} required />
                             </div>
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-3">
                                 <label htmlFor="userGender">Gender</label>
-                                <select id="userGender" className="form-control">Choose
-                                    <option defaultValue>Male</option>
+                                <select id="userGender" className="form-control" onChange={(e) => setGender(e.target.value)}>Choose
+                                    <option>Male</option>
                                     <option>Female</option>
                                     <option>Other</option>
                                 </select>
                             </div>
                             <div className="form-group col-md-4">
                                 <label htmlFor="userDoB">Date of Birth</label>
-                                <input type="date" className="form-control" id="userDoB" required />
+                                <input type="date" className="form-control" id="userDoB" onChange={(e) => setDob(e.target.value)} required />
                             </div>
                             <div className="form-group col-md-5">
                                 <p className="mb-2">Profile Image</p>
                                 <div className="custom-file">
-                                    <input type="file" accept="image/*" className="custom-file-input" id="userProfileImage" />
+                                    <input type="file" accept="image/*" className="custom-file-input" id="userProfileImage" onChange={(e) => setProfileImage(e.target.value)} required />
                                     <label className="custom-file-label" htmlFor="userProfileImage">Choose Image</label>
                                 </div>
                             </div>
@@ -83,7 +85,8 @@ export default function Signup() {
                             </div>
                         </div>
                         <p className="text-danger">  </p>
-                        <button type="submit" className="btn btn-warning text-uppercase mb-3"><b>Create an Account</b></button>
+                        <button type="submit" className="btn btn-warning text-uppercase mb-3" onClick={doSignupUser}><b>Create an Account</b></button>
+                        <ToastContainer />
                     </form>
                     <p className="m-0">Already have an account?
                         <Link to='/login'>
