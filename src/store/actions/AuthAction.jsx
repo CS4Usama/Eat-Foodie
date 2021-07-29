@@ -1,4 +1,6 @@
 import {auth, db} from '../../config/Firebase';
+import { toast } from 'react-toastify';
+
 
 export const LOGIN = 'Login';
 export const LOGOUT = 'Logout';
@@ -15,10 +17,27 @@ export const doLogin = (email, password) => async(dispatch) => {
             type: LOGIN,
             payload: user
         });
+        toast.error('Welcome to your profile...', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     } catch(err) {
         console.log("Exception is: ", err);
         // alert(JSON.stringify(err));
-        alert("User does not exist.");
+        toast.error('User does not exist.', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
 }
 
@@ -28,7 +47,7 @@ export const doSignup = (user) => async(dispatch) => {
         // Firebase Login Code
         const userCredential = await auth.createUserWithEmailAndPassword(user.email, user.password);
         var userData = userCredential.user;
-console.log('UserData logged',user);
+        console.log('UserData logged',user);
         // DB Firestore
         await db.collection("users").add({
             ...user,

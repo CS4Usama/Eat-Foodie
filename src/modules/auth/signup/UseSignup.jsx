@@ -30,7 +30,7 @@ export default function UseSignup() {
             // dispatch(action);
             // dispatch(doSignup(email, password));     //By Separate Parameters/Props
             dispatch(doSignup(user));       //By Object
-            toast.success('You have successfully created your account. Login to view your profile...', {
+            toast.error('Congratulations! You have successfully created your account...', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: true,

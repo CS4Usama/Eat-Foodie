@@ -22,9 +22,9 @@ export default function Navigation() {
                     <Login />
                 </CustomPublicRoute>
 
-                <Route path='/signup'>
+                <CustomPublicRoute path='/signup' auth={authState}>
                     <Signup />
-                </Route>
+                </CustomPublicRoute>
 
             </Switch>
 

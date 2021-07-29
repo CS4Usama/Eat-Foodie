@@ -3,8 +3,6 @@ import './Signup.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavbarComp from "../../../components/navbar/Navbar";
 import UseSignup from "./UseSignup";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Signup() {
@@ -86,7 +84,6 @@ export default function Signup() {
                         </div>
                         <p className="text-danger">  </p>
                         <button type="submit" className="btn btn-warning text-uppercase mb-3" onClick={doSignupUser}><b>Create an Account</b></button>
-                        <ToastContainer />
                     </form>
                     <p className="m-0">Already have an account?
                         <Link to='/login'>
