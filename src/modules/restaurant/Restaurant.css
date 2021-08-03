@@ -1,0 +1,101 @@
+.restaurants-cont1{
+    background: url('../../assets/images/restaurant-header-image.jpg') no-repeat center / cover;
+  }
+  
+  .restaurants-cont1-text{
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+  
+  .input-group-text{
+    color: #999ba3;
+    background-color: #ffffff;  
+  }
+  
+  .input-group .form-control{
+    color: #999ba3 !important;
+    border-left: none;
+  }
+  .form-control::placeholder{
+    color: #999ba3 !important;
+  }
+  
+  .form-control:focus {
+    color: #999ba3;
+    background-color: #fff;
+    /* border-color: ; */
+    outline: 0;
+    box-shadow: none;
+  }
+  
+  .listing-filter .filter-heading{
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .filter-list{
+    list-style: none;
+  }
+  .filter-list li{
+    padding-bottom: 17px;
+  }
+  
+  .listing-filter ul li .custom-checkbox label {
+    color: #999ba3 !important;
+    cursor: pointer !important;
+    font-size: 13px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif !important;
+  }
+  
+  .listing-filter ul li .custom-control-input:checked ~ .custom-control-label::before {
+    color: transparent;
+    border-color: #eb6825;
+    background-color: #eb6825;
+  }
+  
+  .listing-filter ul li .custom-control-label::before{
+    background-color: transparent;
+    border: #999ba3 solid 1px;
+  }
+  
+  .sort-by ul{
+    list-style: none;
+  }
+  .sort-by h5{
+    font: 700 Normal 16px/22px "Montserrat", sans-serif !important;
+  }
+  
+  .sort-by ul li{
+    font-size: 14px;
+    font-weight: 300 !important;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .sort-by ul li:hover{
+    color: #eb6825;
+  }
+
+  .btn-warning {
+    color: white !important;
+    background-color: #eb6825 !important;
+  }
+
+  .btn-warning:hover {
+    text-decoration: none !important;
+    color: #eb6825 !important;
+    background-color: #fff !important;
+}
+
+  .view-menu {
+    color: white !important;
+    background-color: #eb6825 !important;
+}
+
+  .view-menu:hover {
+    text-decoration: none !important;
+    color: #eb6825 !important;
+    background-color: #fff !important;
+}

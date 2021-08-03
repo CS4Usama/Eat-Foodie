@@ -16,7 +16,7 @@ function AuthReducer(state=initialState, action) {
                 isUserLoggedIn: true,
                 user: action.payload
             };
-
+            
         case LOGOUT:
             // If User Login then What ?
             return {
@@ -25,6 +25,7 @@ function AuthReducer(state=initialState, action) {
                 // user: {}
                 user: null
             };
+            
 
         default:
             return state;

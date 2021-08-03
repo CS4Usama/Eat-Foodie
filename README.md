@@ -23,6 +23,8 @@ HTML5 is totally replaced with **JSX** and CSS3 is somehow replaced with **JSS**
 - React Visibility Sensor
 - React CountUp
 - React Rating Stars Component
+- React-Toastify
+- SweetAlert2
 </br></br>
 ### Steps to run this project's source code successfully without any error:
 1. [Download Node.js](https://nodejs.org/en/download) and install it.

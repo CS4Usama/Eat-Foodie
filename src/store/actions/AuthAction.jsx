@@ -6,6 +6,7 @@ export const LOGIN = 'Login';
 export const LOGOUT = 'Logout';
 
 export const doLogin = (email, password) => async(dispatch) => {
+    
     try {
         // Firebase Login Code
         const userCredential = await auth.signInWithEmailAndPassword(email, password)
@@ -17,6 +18,7 @@ export const doLogin = (email, password) => async(dispatch) => {
             type: LOGIN,
             payload: user
         });
+
         toast.error('Welcome to your profile...', {
             position: "top-center",
             autoClose: 5000,

@@ -3,16 +3,12 @@ import './LoginNavbar.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import UseLoginNavbar from './UseLoginNavbar';
-import { useSelector } from "react-redux";
 
-// import image from "../../../assets/images/feature-restaurant-1.png"
+import image from "../../../assets/images/download.jpg"
 
 
 function LoginNavbar() {
     const [doUserLogout] = UseLoginNavbar();
-    const name = useSelector(state => state.AuthReducer.user);
-    const image = useSelector(state => state.AuthReducer.user.profileImage);
-    console.log(name)
 
     return(
         <div>
@@ -38,7 +34,7 @@ function LoginNavbar() {
                         </Nav.Link>
                         <Nav.Link eventKey={3} className="profile-container">
                             <Link className="text-uppercase navLink" to="/profile">
-                                {/* <img src={image} alt="" className="profile-image" draggable='false' /> */}
+                                <img src={image} alt="" className="profile-image" draggable='false' />
                                 Profile Name
                             </Link>
                         </Nav.Link>

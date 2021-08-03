@@ -21,3 +21,9 @@
     top: 5px;
     right: 5px;
 }
+
+.btn-warning:hover {
+    color: #eb6825 !important;
+    background-color: #fff !important;
+    border-color: #eb6825 !important;
+}

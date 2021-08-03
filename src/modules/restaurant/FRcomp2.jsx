@@ -1,10 +1,11 @@
-import './FeaturedRestaurants.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import './Restaurant.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import ReactStars from "react-rating-stars-component";
+import { Link } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faStar, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-export default function FRcomp(props) {
+export default function FRcomp2(props) {
     return(
         <div className="container res-border">
             <div className="row p-3">
@@ -28,6 +29,11 @@ export default function FRcomp(props) {
                         </small>
                         <small className="review">{props.review}</small>
                     </p>
+                    <button className="btn btn-warning btn-sm text-uppercase mx-2 px-3 py-0">
+                        <Link to="restaurant-detail" className="view-menu">
+                            View Menu
+                        </Link>
+                    </button>
                     <span className="favoriteRestaurant">
                         {/* <FontAwesomeIcon icon={faHeart} className="text-success mr-1" /> */}
                         <ReactStars
