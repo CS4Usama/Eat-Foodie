@@ -124,7 +124,7 @@ function Footer () {
             <div className="container">
                 <div className="col-12 footer-copyright">
                     <p>© 2021 Eat Foodie. All Rights Reserved. Powered By &nbsp;
-                        <a href="https://github.com/CS4Usama" target="_blank" rel="noreferrer">Cyber Hawk</a>
+                        <a href="https://github.com/CS4Usama" target="_blank" rel="noreferrer" className="footer-github">Cyber Hawk</a>
                     </p>
                 </div>
             </div>

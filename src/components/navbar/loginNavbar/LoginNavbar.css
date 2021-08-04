@@ -24,6 +24,11 @@
     padding: none !important;
     margin-right: 10px;
 }
+
+.navLink:hover {
+    text-decoration: underline !important;
+    color: white;
+}
   
 .btn-warning {
     color: #fff !important;
