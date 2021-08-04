@@ -34,9 +34,9 @@ export default function Navigation() {
                     <RegisterRestaurant />
                 </Route>
 
-                <Route exact path='/restaurants'>
+                <PrivateRoute exact path='/restaurants' auth={authState}>
                     <Restaurant />
-                </Route>
+                </PrivateRoute>
 
                 <Route exact path='/restaurant-detail'>
                     <RestaurantDetail />
