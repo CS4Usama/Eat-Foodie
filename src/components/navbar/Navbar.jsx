@@ -28,7 +28,7 @@ function NavbarComp(props) {
                             </Link>
                         </Nav.Link>
                         <button type="button" className="btn btn-warning btn-sm text-uppercase mx-2 px-3 py-0">
-                            <Link to="/register-restaurant">
+                            <Link to="/register-restaurant" className="regRes">
                                 Register Restaurant
                             </Link>
                         </button>

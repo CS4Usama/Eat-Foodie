@@ -45,3 +45,8 @@
     background-color: #fff !important;
     border-color: #eb6825 !important;
 }
+
+.regRes:hover {
+    color: #eb6825 !important;
+    text-decoration: none;
+}
