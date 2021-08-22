@@ -27,11 +27,11 @@ function NavbarComp(props) {
                                 Login / Register
                             </Link>
                         </Nav.Link>
-                        <button type="button" className="btn btn-warning btn-sm text-uppercase mx-2 px-3 py-0">
-                            <Link to="/register-restaurant" className="regRes">
+                        <Link to="/register-restaurant" className="">
+                            <button type="button" className="btn nbRegRes btn-warning btn-sm text-uppercase mx-2 px-3 py-0">
                                 Register Restaurant
-                            </Link>
-                        </button>
+                            </button>
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

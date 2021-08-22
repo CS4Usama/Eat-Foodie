@@ -4,17 +4,27 @@ import {LOGIN, LOGOUT} from '../actions/AuthAction';
 let initialState = {
     isUserLoggedIn: false,
     // user: {}
-    user: null
+    userArr: null
 }
 
 function AuthReducer(state=initialState, action) {
     switch (action.type) {
         case LOGIN:
+            // console.log(action.payload.snapshot)
             // If User Login then What ?
+            // let userName = state.userArr.map((item) => {
+            //     if(action.payload.docId === item.docID) {
+            //         return {...action.payload.data, ...action.payload.docID};
+            //     } else {
+            //         return item;
+            //     }
+            // })
+            // console.log("Login User is: ",userName);
             return {
                 ...state,
                 isUserLoggedIn: true,
                 user: action.payload
+                // user: userName
             };
             
         case LOGOUT:

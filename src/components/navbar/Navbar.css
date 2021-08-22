@@ -39,6 +39,10 @@
     font-weight: 700 !important;
     height: 2.7em !important;
 }
+
+.nbRegRes {
+    width: 100% !important;
+}
   
 .btn-warning:hover {
     color: #eb6825 !important;
@@ -50,3 +54,11 @@
     color: #eb6825 !important;
     text-decoration: none;
 }
+
+/* @media (max-width: 767px) {
+    .btn-warning {
+        position: absolute !important;
+        display: block !important;
+        width: 100% !important;
+    }
+} */

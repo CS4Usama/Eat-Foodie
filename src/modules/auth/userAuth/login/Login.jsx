@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Login.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import NavbarComp from "../../../components/navbar/Navbar";
+import NavbarComp from "../../../../components/navbar/Navbar";
 import UseLogin from "./UseLogin";
 
 

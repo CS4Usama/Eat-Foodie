@@ -1,0 +1,59 @@
+.register-cont1 {
+    background: url('../../../../assets/images/restaurant-detail-header-image.jpg') no-repeat center / cover;
+}
+
+.register-cont1-text {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.loginAcc {
+    letter-spacing: 1px !important;
+}
+
+.form-control::placeholder {
+    color: #999ba3 !important;
+}
+
+.form-control:focus {
+    color: #999ba3 !important;
+    background-color: #fff !important;
+    box-shadow: none !important;
+}
+
+span.text-warning {
+    color: #eb6825 !important;
+}
+
+.text-warning:hover {
+    color: #fa5603 !important;
+    font-weight: 500;
+}
+
+.password-toogle-icon-signup {
+    color: rgb(130, 130, 130);
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    right: 0.8em;
+    margin-top: 2.5em;
+}
+
+
+@media (max-width: 768px) {
+    h1 > strong {
+        font-size: 45px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 > strong {
+      font-size: 30px !important;
+    }
+}
+
+@media (max-width: 393px) {
+    h1 > strong {
+      font-size: 20px !important;
+    }
+}

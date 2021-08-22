@@ -18,9 +18,9 @@ function Footer () {
                         </div>
                         <div className="footer-list-div">
                             <ul>
-                                <li><a href="/">Islamabad</a></li>
                                 <li><a href="/">Gojra</a></li>
                                 <li><a href="/">Faisalabad</a></li>
+                                <li><a href="/">Islamabad</a></li>
                                 <li><a href="/">Lahore</a></li>
                                 <li><a href="/">Karachi</a></li>
                             </ul>

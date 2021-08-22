@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import './Signup.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import NavbarComp from "../../../components/navbar/Navbar";
+import NavbarComp from "../../../../components/navbar/Navbar";
 import UseSignup from "./UseSignup";
 
 
 export default function Signup() {
-    const [passwordToogleIcon1, passwordToogleIcon2, passwordInputType1, passwordInputType2, setEmail, setPassword, setConfirmPassword, setName, setCity, setFavDish, setGender, setDob, setProfileImage, doSignupUser] = UseSignup();
+    const [passwordToogleIcon1, passwordToogleIcon2, passwordInputType1, passwordInputType2, setEmail, setPassword, setConfirmPassword, setName, setCity, setNumber, setGender, setCountry, setProfileImage, doSignupUser] = UseSignup();
 
     return(
         <div>
@@ -47,15 +47,19 @@ export default function Signup() {
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="userCity">City</label>
-                                <input type="text" className="form-control" id="userCity" placeholder="Your City Name" onChange={(e) => setCity(e.target.value)} required />
+                                <label htmlFor="userPhoneNumber">Phone Number</label>
+                                <input type="number" className="form-control" id="userPhoneNumber" placeholder="Your Phone Number" onChange={(e) => setNumber(e.target.value)} required />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="userFavoriteDish">Favorite Dish</label>
-                                <input type="text" className="form-control" id="userFavoriteDish" placeholder="Your Favorite Dish" onChange={(e) => setFavDish(e.target.value)} required />
+                                <label htmlFor="userCountry">Country</label>
+                                <input type="text" className="form-control" id="userCountry" placeholder="Your Country Name" onChange={(e) => setCountry(e.target.value)} required />
                             </div>
                         </div>
                         <div className="form-row">
+                            <div className="form-group col-md-4">
+                                <label htmlFor="userCity">City</label>
+                                <input type="text" className="form-control" id="userCity" placeholder="Your City Name" onChange={(e) => setCity(e.target.value)} required />
+                            </div>
                             <div className="form-group col-md-3">
                                 <label htmlFor="userGender">Gender</label>
                                 <select id="userGender" className="form-control" onChange={(e) => setGender(e.target.value)}>Choose
@@ -63,10 +67,6 @@ export default function Signup() {
                                     <option>Female</option>
                                     <option>Other</option>
                                 </select>
-                            </div>
-                            <div className="form-group col-md-4">
-                                <label htmlFor="userDoB">Date of Birth</label>
-                                <input type="date" className="form-control" id="userDoB" onChange={(e) => setDob(e.target.value)} required />
                             </div>
                             <div className="form-group col-md-5">
                                 <p className="mb-2">Profile Image</p>

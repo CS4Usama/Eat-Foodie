@@ -1,5 +1,5 @@
 .register-cont1 {
-    background: url('../../../assets/images/login-header-image.jpg') no-repeat center / cover;
+    background: url('../../../../assets/images/login-header-image.jpg') no-repeat center / cover;
 }
 
 .register-cont1-text {
@@ -16,12 +16,12 @@
 }
 
 .form-control:focus {
-    color: #999ba3 !important;
-    background-color: #fff !important;
-    box-shadow: none !important;
+    color: #999ba3;
+    background-color: #fff;
+    box-shadow: none;
 }
 
-span.text-warning {
+.text-warning {
     color: #eb6825 !important;
 }
 
@@ -30,12 +30,12 @@ span.text-warning {
     font-weight: 500;
 }
 
-.password-toogle-icon-signup {
+.password-toogle-icon {
     color: rgb(130, 130, 130);
     position: absolute;
     cursor: pointer;
     z-index: 100;
-    right: 0.8em;
+    right: 3.5em;
     margin-top: 2.5em;
 }
 
@@ -54,6 +54,8 @@ span.text-warning {
 
 @media (max-width: 393px) {
     h1 > strong {
+      font-size: 20px !important;
+    } h2 {
       font-size: 20px !important;
     }
 }

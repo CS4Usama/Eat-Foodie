@@ -18,7 +18,7 @@ export default function HomeScreen() {
           <NavbarComp />
       }
       <div className="container home-cont1-text">
-        <h1 className="h1 text-uppercase text-white text-center mb-4"><strong>Food doesn't have a Religion. <br /> It's a Religion</strong></h1>
+        <h1 className="h1 text-uppercase text-white text-center mb-4"><strong>Wake up It's FooD o'Clock. <br/> Eat Good Feel Good</strong></h1>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-6 col-sm-12 mb-3">

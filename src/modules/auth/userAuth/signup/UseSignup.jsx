@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {doSignup} from '../../../store/actions/AuthAction';
+import {doSignup} from '../../../../store/actions/AuthAction';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-toastify';
+
+// import {storage} from "../../../config/Firebase";
+
 
 
 export default function UseSignup() {
@@ -15,15 +18,16 @@ export default function UseSignup() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [name, setName] = useState('');
     const [city, setCity] = useState('');
-    const [favDish, setFavDish] = useState('');
+    const [number, setNumber] = useState('');
     const [gender, setGender] = useState('male');
-    const [dob, setDob] = useState('');
+    const [country, setCountry] = useState('');
     const [profileImage, setProfileImage] = useState('');
     const dispatch = useDispatch();
 
     const doSignupUser = () => {
+        
         let user = {
-            email, password, name, city, favDish, gender, dob, profileImage
+            email, password, name, city, number, gender, country, profileImage
         }
         console.log("USAMA", user);
         if(password === confirmPassword) {
@@ -68,6 +72,11 @@ export default function UseSignup() {
     );
     const passwordInputType2 = passwordVisibility2 ? "text" : "password";
 
+    // const storageRef = storage.ref();
+    // const imageRef = storageRef.child(profileImage.name);
+    // imageRef.put(profileImage)
+    // const imageLink = imageRef.getDownloadURL();
 
-    return [passwordToogleIcon1, passwordToogleIcon2, passwordInputType1, passwordInputType2, setEmail, setPassword, setConfirmPassword, setName, setCity, setFavDish, setGender, setDob, setProfileImage, doSignupUser];
+
+    return [passwordToogleIcon1, passwordToogleIcon2, passwordInputType1, passwordInputType2, setEmail, setPassword, setConfirmPassword, setName, setCity, setNumber, setGender, setCountry, setProfileImage, doSignupUser];
 }

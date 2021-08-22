@@ -1,95 +1,106 @@
 import {auth, db} from '../../config/Firebase';
+import { toast } from 'react-toastify';
 
 
-const restaurant_list = () => {
-    return (dispatch) => {
-        db.collection('users').onSnapshot(snapshot => {
-            const restaurantList = [];
-            snapshot.forEach(doc => {
-                if (doc.data().isRestaurant) {
-                    const obj = { id: doc.id, ...doc.data() }
-                    restaurantList.push(obj);
-                }
-            })
-            console.log('Restaurant List', restaurantList);
-            dispatch({
-                type: 'RESTAURANT_LIST',
-                restaurantList: restaurantList,
-            })
+export const LOGIN = 'Login';
+export const LOGOUT = 'Logout';
+
+export const doLogin = (email, password) => async(dispatch) => {
+    
+    try {
+        // Firebase Login Code
+        const resCredential = await auth.signInWithEmailAndPassword(email, password)
+        var res = resCredential.res;
+        console.log("restaurant", res.uid);
+        let snapshot = await db.collection('restaurants').where('uid','==',res.uid).get();
+        let resRecord = {}
+        snapshot.forEach((item)=>{
+            resRecord = item.data()
+          console.log("item", item.data());
         })
-    }
-}
 
-const order_request = () => {
-    return (dispatch) => {
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                // console.log("user uid => ", user.uid)
-                db.collection('users').doc(user.uid).collection("orderRequest").onSnapshot(snapshot => {
-                    const orderRequest = [];
-                    snapshot.forEach(doc => {
-                        const obj = { id: doc.id, ...doc.data() }
-                        // console.log("Order Request From Action => ", obj)
-                        orderRequest.push(obj)
-                    })
-                    dispatch({
-                        type: 'ORDER_REQUEST',
-                        orderRequest: orderRequest,
-                    })
-                })
-            }
+        console.log("Restaurant ID:", );
+        dispatch({
+            type: LOGIN,
+            payload: resRecord
         });
-    }
-}
 
-const my_order = () => {
-    return (dispatch) => {
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                // console.log("user uid => ", user.uid)
-                db.collection('users').doc(user.uid).collection("myOrder").onSnapshot(snapshot => {
-                    const myOrder = [];
-                    snapshot.forEach(doc => {
-                        const obj = { id: doc.id, ...doc.data() }
-                        // console.log("Order Request From Action => ", obj)
-                        myOrder.push(obj)
-                    })
-                    dispatch({
-                        type: 'MY_ORDER',
-                        myOrder: myOrder,
-                    })
-                })
-            }
+        toast.error('Welcome to your profile...', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
         });
-    }
-}
-
-const my_foods = () => {
-    return (dispatch) => {
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                // console.log("user uid => ", user.uid)
-                db.collection('users').doc(user.uid).collection("menuItems").onSnapshot(snapshot => {
-                    const myFoods = [];
-                    snapshot.forEach(doc => {
-                        const obj = { id: doc.id, ...doc.data() }
-                        // console.log("Order Request From Action => ", obj)
-                        myFoods.push(obj)
-                    })
-                    dispatch({
-                        type: 'MY_FOODS',
-                        myFoods: myFoods,
-                    })
-                })
-            }
+    } catch(err) {
+        console.log("Exception is: ", err);
+        // alert(JSON.stringify(err));
+        toast.error('Restaurant does not exist.', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
         });
     }
 }
 
 
-export {
-    restaurant_list,
-    order_request,
-    my_order,
-    my_foods,
+export const doSignup = (res) => async(dispatch) => {
+    try {
+        // Firebase Login Code
+        const resCredential = await auth.createUserWithEmailAndPassword(res.email, res.password);
+        var resData = resCredential.res;
+        console.log("USAMA Mushtaq")
+        console.log('RestaurantData logged',res);
+        // DB Firestore
+        await db.collection("restaurants").add({
+            ...res,
+            // email: res.email,
+            // password: res.password,
+            uid: resData.uid
+        });
+        
+        let snapshot = await db.collection('restaurants').get();
+        let resArr = [];
+        snapshot.forEach((doc) => {
+            resArr.push({
+                docID: doc.id,
+                ...doc.data()
+            });
+        })
+        console.log(resData)
+        console.log("Array", resArr)
+
+        dispatch({
+            type: LOGIN,
+            payload: resData
+        });
+    } catch(err) {
+        console.log("Exception is: ", err);
+        // alert(err);
+        alert(JSON.stringify(err));
+    }
+}
+
+
+export const doLogout = () => async(dispatch) => {
+    try {
+        // Firebase Login Code
+        const res = await auth.signOut();
+
+        console.log("Logout Response:", res);
+
+        dispatch({
+            type: LOGOUT,
+        });
+    } catch(err) {
+        console.log("Exception is: ", err);
+        // alert(err);
+        alert(JSON.stringify(err));
+    }
 }

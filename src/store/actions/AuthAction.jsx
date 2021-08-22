@@ -11,12 +11,18 @@ export const doLogin = (email, password) => async(dispatch) => {
         // Firebase Login Code
         const userCredential = await auth.signInWithEmailAndPassword(email, password)
         var user = userCredential.user;
+        console.log("user", user.uid);
+        let snapshot = await db.collection('users').where('uid','==',user.uid).get();
+        let userRecord = {}
+        snapshot.forEach((item)=>{
+            userRecord = item.data()
+          console.log("item", item.data());
+        })
 
-        console.log("User ID:", user.uid);
-
+        console.log("User ID:", );
         dispatch({
             type: LOGIN,
-            payload: user
+            payload: userRecord
         });
 
         toast.error('Welcome to your profile...', {
@@ -49,6 +55,7 @@ export const doSignup = (user) => async(dispatch) => {
         // Firebase Login Code
         const userCredential = await auth.createUserWithEmailAndPassword(user.email, user.password);
         var userData = userCredential.user;
+        console.log("USAMA Mushtaq")
         console.log('UserData logged',user);
         // DB Firestore
         await db.collection("users").add({
@@ -57,6 +64,17 @@ export const doSignup = (user) => async(dispatch) => {
             // password: user.password,
             uid: userData.uid
         });
+        
+        let snapshot = await db.collection('users').get();
+        let userArr = [];
+        snapshot.forEach((doc) => {
+            userArr.push({
+                docID: doc.id,
+                ...doc.data()
+            });
+        })
+        console.log(userData)
+        console.log("Array", userArr)
 
         dispatch({
             type: LOGIN,
